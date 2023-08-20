@@ -1,0 +1,39 @@
+<div class="card shadow mx-auto mt-5 mb-5">
+  <div class="card-header container-fluid">
+    <div class="row">
+      <div class="col-lg-6 p-2">
+        <span class=""
+          ><i class="fa-solid fa-location-dot icon"></i>
+          {{ weather.name }}</span
+        >
+      </div>
+      <div class="col-lg-6 p-2">
+        <span class=""
+          ><i class="fa-solid fa-calendar-days icon"></i> {{ date }}</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 p-2">
+        <span class="">
+          <i class="fa-regular fa-clock icon"></i> {{ time }}
+        </span>
+      </div>
+      <div class="col-6 p-2">
+        <span class=""> 24h-format </span>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <p><b>Temperature:</b> {{ weather.main.temp }} &deg;C</p>
+    <p><b>Feels like:</b> {{ weather.main.feels_like }} &deg;C</p>
+    <p><b>Humidity:</b> {{ weather.main.humidity }}%</p>
+    <p><b>Weather type:</b> {{ weather.weather.description }}</p>
+    <p>
+      <b>Wind speed:</b> {{ weather.wind.speed }} m/s at
+      {{ weather.wind.deg }} &deg;meteorological
+    </p>
+    <p><b>Sunrise:</b> {{ weather.sys.sunrise }} am</p>
+    <p><b>Sunset:</b> {{ weather.sys.sunset }} pm</p>
+  </div>
+</div>
